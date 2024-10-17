@@ -6,7 +6,7 @@ edit_uri: /edit/main/docs/
 
 nav:
   - Home: 
-      - Introduction: index.md
+      - Introduction: intro.md
   - Engine:
       - Introduction: Engine/index.md
       - Components:
@@ -26,7 +26,7 @@ nav:
 
 theme:
   name: material
-#  custom_dir: overrides
+  custom_dir: docs/overrides
   icon:
     repo: fontawesome/brands/github-alt
   #logo: img/Vanguard.png
@@ -46,6 +46,7 @@ theme:
     - content.code.copy
     - content.code.select
     - content.code.annotate
+    - content.footnote.tooltips
   palette:
     - scheme: default
       primary: custom
@@ -72,6 +73,7 @@ markdown_extensions:
       alternate_style: true
   - attr_list
   - md_in_html
+  - footnotes
 
 extra:
   annotate:
