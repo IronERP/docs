@@ -1,8 +1,8 @@
 site_name: IronERP Docs
 
-repo_url: https://github.com/UTF-8x/IronERP
-repo_name: UTF-8x/IronERP
-edit_uri: /edit/main/docs/
+repo_url: https://github.com/IronERP/IronERP
+repo_name: IronERP/IronERP
+edit_uri: https://github.com/IronERP/docs/edit/main/docs/
 
 nav:
   - Home: 
@@ -17,6 +17,9 @@ nav:
           - Controllers: Engine/Components/controllers.md
           - Forms: Engine/Components/forms.md
           - Search: Engine/Components/search.md
+      - API:
+        - Model CRUD: Engine/API/crud.md
+        - Meilisearch API: Engine/API/meilisearch.md
   - CLI:
       - Introduction: CLI/index.md
       - Reference:
