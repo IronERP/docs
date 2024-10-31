@@ -1,3 +1,0 @@
-# Installing IronERP
-
-// TBD

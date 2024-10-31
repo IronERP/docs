@@ -1,3 +1,7 @@
+---
+sidebar_label: Help
+---
+
 # The Help Module
 
 This is a simple meta-module used for printing out help information.

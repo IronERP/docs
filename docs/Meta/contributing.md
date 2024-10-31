@@ -2,9 +2,12 @@
 
 ## Contributing Code
 
-!!!INFO
-    For information about contributing to IronERP Code, please see
-    [Contributing Code](/Engine/contributing.md)
+:::info
+
+For information about contributing to IronERP Code, please see
+[Contributing Code](/Engine/contributing.md)
+
+:::
 
 ## Contributing Documentation
 

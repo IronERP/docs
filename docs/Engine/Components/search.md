@@ -17,10 +17,13 @@ Advanced search for entities under a specific model
 IronERP uses Meilisearch as the search engine. All relevant database contents
 are automatically indexed on start.
 
-!!!WARNING
-    Indexing a large database can take a long time. For larger deployments, you should
-    use persistent storage for your Meilisearch instance(s) and configure the IronERP
-    indexer for incremental indexing.
+:::warn
+
+Indexing a large database can take a long time. For larger deployments, you should
+use persistent storage for your Meilisearch instance(s) and configure the IronERP
+indexer for incremental indexing.
+
+:::
 
 ## API
 

@@ -60,10 +60,13 @@ This endpoint returns a list of all entities under the specified model.
 This endpoint will perform a full-text search across all fields marked as 
 Searchable [^2]
 
-!!! INFO
-    This endpoint performs search over marked fields of a specific model. To
-    perform a simplified search over **all** database entities, use the
-    [Meilisearch Endpoints](/Engine/API/meilisearch) instead!
+:::info
+
+This endpoint performs search over marked fields of a specific model. To
+perform a simplified search over **all** database entities, use the
+[Meilisearch Endpoints](/Engine/API/meilisearch) instead!
+
+:::
 
 `GET /api/v1/<ModelName>/_search?query=<search query>`
 

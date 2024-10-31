@@ -7,9 +7,12 @@ are automatically generated when necessary.
 
 ## Creating a Model
 
-!!! INFO
-    If you want to create your models using a user-friendly graphical model builder,
-    please see the [Model Builder](#) page.
+:::info
+
+If you want to create your models using a user-friendly graphical model builder,
+please see the [Model Builder](#) page.
+
+:::
 
 Instead of using the graphical Model Builder, you can create model definitions manyually
 in the database.
@@ -68,8 +71,11 @@ When you add a new model through the Model Builder, the appropriate C# files wil
 generated automatically. When you add a model manually, you will need to generate them
 yourself.
 
-!!! INFO
-    For more info about the command line utility, see [CLI/Models](/CLI/Reference/model/)
+:::info
+
+For more info about the command line utility, see [CLI/Models](/CLI/Reference/model/)
+
+:::
 
 To generate all model files, run
 

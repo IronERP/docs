@@ -4,18 +4,21 @@ IronERP indexes simplified information about all database entities in
 Meilisearch. The Meilisearch instance can then be used for very fast site-wide
 search across the entire database.
 
-!!! INFO
-    For optimal performance, Meilisearch recommends calling the Meilisearch API
-    directly from the end-user frontend. That is exactly what we are doing.
+:::info
 
-    This document describes how to call the Meilisearch API correctly. IronERP
-    does not expose any intermediary endpoints.
+For optimal performance, Meilisearch recommends calling the Meilisearch API
+directly from the end-user frontend. That is exactly what we are doing.
 
-    For more details, please refer to the 
-    [Meilisearch Docs](https://www.meilisearch.com/docs)
+This document describes how to call the Meilisearch API correctly. IronERP
+does not expose any intermediary endpoints.
 
-    For more info about how IronERP interacts with Meilisearch, please see the
-    [IronERP Search Docs](Engine/Components/search).
+For more details, please refer to the 
+[Meilisearch Docs](https://www.meilisearch.com/docs)
+
+For more info about how IronERP interacts with Meilisearch, please see the
+[IronERP Search Docs](Engine/Components/search).
+
+:::
 
 ## Indexed Fields
 
