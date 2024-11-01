@@ -9562,6 +9562,7 @@ __metadata:
     react: ^18.0.0
     react-dom: ^18.0.0
     tailwindcss: ^3.4.14
+    tailwindcss-scoped-preflight: ^3.4.5
     typescript: ~5.5.2
   languageName: unknown
   linkType: soft
@@ -16061,6 +16062,16 @@ __metadata:
   version: 2.0.17
   resolution: "synchronous-promise@npm:2.0.17"
   checksum: 7b1342c93741f3f92ebde1edf5d6ce8dde2278de948d84e9bd85e232c16c0d77c90c4940f9975be3effcb20f047cfb0f16fa311c3b4e092c22f3bf2889fb0fb4
+  languageName: node
+  linkType: hard
+
+"tailwindcss-scoped-preflight@npm:^3.4.5":
+  version: 3.4.6
+  resolution: "tailwindcss-scoped-preflight@npm:3.4.6"
+  peerDependencies:
+    postcss: ^8
+    tailwindcss: ^3
+  checksum: 82f7c5b58927979b4ae4134a7e542c36cc1955c31db2df24e6abad8b066999d3505a7e2d5cdb79c3d4d24af1e6b308fe1eb051f8e63b7fa1a7a50d8889dcc9a2
   languageName: node
   linkType: hard
 
