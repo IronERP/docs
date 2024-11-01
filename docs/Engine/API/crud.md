@@ -64,7 +64,7 @@ Searchable [^2]
 
 This endpoint performs search over marked fields of a specific model. To
 perform a simplified search over **all** database entities, use the
-[Meilisearch Endpoints](/Engine/API/meilisearch) instead!
+[Meilisearch Endpoints](/docs/Engine/API/meilisearch) instead!
 
 :::
 

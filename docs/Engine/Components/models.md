@@ -73,7 +73,7 @@ yourself.
 
 :::info
 
-For more info about the command line utility, see [CLI/Models](/CLI/Reference/model/)
+For more info about the command line utility, see [CLI/Models](/docs/CLI/Reference/models)
 
 :::
 
