@@ -1,19 +1,9 @@
-import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
-import { useBaseUrlUtils } from '@docusaurus/useBaseUrl';
 import { GithubIcon, SlackIcon } from '../components/Icons';
 
 export default function Home(): JSX.Element {
   return (
-    // <Layout
-    //   title={`Hello from ${siteConfig.title}`}
-    //   description="Description will go into a meta tag in <head />">
-    //   <HomepageHeader />
-    //   <main>
-    //     <HomepageFeatures />
-    //   </main>
-    // </Layout>
     <>
-      <div id="tailwind">
+      <div id="tailwind" className='preflight'>
         <div className="absolute inset-0 -z-10 h-full w-full bg-white bg-[linear-gradient(to_right,#f0f0f0_1px,transparent_1px),linear-gradient(to_bottom,#f0f0f0_1px,transparent_1px)] bg-[size:6rem_4rem]"><div className="absolute bottom-0 left-0 right-0 top-0 bg-[radial-gradient(circle_800px_at_100%_200px,#d5c5ff,transparent)]"></div></div>
         <header>
           <nav className=" border-gray-200 px-4 lg:px-6 py-2.5 dark:bg-gray-800">
@@ -23,8 +13,8 @@ export default function Home(): JSX.Element {
                 <span className="self-center text-xl font-semibold whitespace-nowrap dark:text-white">IronERP</span>
               </a>
               <div className="flex items-center lg:order-2">
-                <a href="#" className="text-gray-800 dark:text-white hover:bg-gray-50 focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 dark:hover:bg-gray-700 focus:outline-none dark:focus:ring-gray-800"><SlackIcon />Community Slack</a>
-                <a href="#" className="text-white bg-slate-700 shadow hover:bg-slate-800 focus:ring-4 focus:ring-primary-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 dark:bg-primary-600 dark:hover:bg-primary-700 focus:outline-none dark:focus:ring-primary-800"><GithubIcon /> GitHub</a>
+                <a href="https://join.slack.com/t/ironerpcommunity/shared_invite/zt-2t4uolzc7-CUjdKR4uU1fVUMguZStAow" className="text-gray-800 dark:text-white hover:bg-gray-50 focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 dark:hover:bg-gray-700 focus:outline-none dark:focus:ring-gray-800"><SlackIcon />Community Slack</a>
+                <a href="https://github.com/IronERP/IronERP" className="text-white bg-slate-700 shadow hover:bg-slate-800 focus:ring-4 focus:ring-primary-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 dark:bg-primary-600 dark:hover:bg-primary-700 focus:outline-none dark:focus:ring-primary-800"><GithubIcon /> GitHub</a>
 
                 <button data-collapse-toggle="mobile-menu-2" type="button" className="inline-flex items-center p-2 ml-1 text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="mobile-menu-2" aria-expanded="false">
                   <span className="sr-only">Open main menu</span>
@@ -49,11 +39,13 @@ export default function Home(): JSX.Element {
         <section className=" dark:bg-gray-900">
           <div className="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16 lg:px-12">
             {/* New Release Callout */}
-            <a href="#" className="inline-flex justify-between items-center py-1 px-1 pr-4 mb-7 text-sm text-gray-700 bg-gray-100 rounded-full dark:bg-gray-800 dark:text-white hover:bg-gray-200 dark:hover:bg-gray-700" role="alert">
+            <a href="/blog/first-release" className="inline-flex justify-between items-center py-1 px-1 pr-4 mb-7 text-sm text-gray-700 bg-gray-100 rounded-full dark:bg-gray-800 dark:text-white hover:bg-gray-200 dark:hover:bg-gray-700" role="alert">
               <span className="text-xs bg-primary-600 rounded-full text-white px-4 py-1.5 mr-3">New!</span> <span className="text-sm font-medium">&#127881; IronERP v1.0.0 is out! See the changelog</span>
               <svg className="ml-2 w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg>
             </a>
+            {/* End Release Callout */}
 
+            {/* HERO */}
             <h1 className="mb-4 text-4xl font-extrabold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-6xl dark:text-white">ERP for the 21st Century</h1>
             <p className="mb-8 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 xl:px-48 dark:text-gray-400">IronERP is a free and open-source, ultra-customizable, next-generation ERP Engine.</p>
             <p className="mb-8 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 xl:px-48 dark:text-gray-400">Forever free. 100% FOSS</p>
@@ -74,6 +66,10 @@ export default function Home(): JSX.Element {
               </a>
 
             </div>
+            {/* End HERO */}
+
+
+            {/* Featured In Section */}
             <div className="px-4 mx-auto text-center md:max-w-screen-md lg:max-w-screen-lg lg:px-36">
               <span className="font-semibold text-gray-400 uppercase">FEATURED IN</span>
               <div className="flex flex-wrap justify-center items-center mt-8 text-gray-500 sm:justify-between">
@@ -107,9 +103,11 @@ export default function Home(): JSX.Element {
                 </a>
               </div>
             </div>
+            {/* End Featured In Section */}
           </div>
         </section>
 
+        {/* FAQ Section */}
         <section className="bg-white dark:bg-gray-900">
           <div className="py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-6">
             <h2 className="mb-8 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">Frequently asked questions</h2>
@@ -159,6 +157,70 @@ export default function Home(): JSX.Element {
             </div>
           </div>
         </section>
+        {/* FAQ Section */}
+
+        {/* Footer */}
+        <footer className="p-4 bg-gray-800 sm:p-6 dark:bg-gray-800 text-white">
+          <div className="mx-auto max-w-screen-xl">
+              <div className="md:flex md:justify-between">
+                  <div className="mb-6 md:mb-0">
+                      <a href="https://flowbite.com" className="flex items-center">
+                          <img src="https://flowbite.com/docs/images/logo.svg" className="mr-3 h-8" alt="FlowBite Logo" />
+                          <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Flowbite</span>
+                      </a>
+                  </div>
+                  <div className="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
+                      <div>
+                          <h2 className="mb-6 text-sm font-semibold uppercase dark:text-white">Resources</h2>
+                          <ul className="dark:text-gray-400">
+                              <li className="mb-4">
+                                  <a href="/docs/intro" className="hover:underline">Documentation</a>
+                              </li>
+                              <li>
+                                  <a href="https://github.com/IronERP/IronERP" className="hover:underline">GitHub</a>
+                              </li>
+                          </ul>
+                      </div>
+                      <div>
+                          <h2 className="mb-6 text-sm font-semibold  uppercase dark:text-white">Support</h2>
+                          <ul className=" dark:text-gray-400">
+                              <li className="mb-4">
+                                  <a href="https://join.slack.com/t/ironerpcommunity/shared_invite/zt-2t4uolzc7-CUjdKR4uU1fVUMguZStAow" className="hover:underline">Community Slack</a>
+                              </li>
+                              <li>
+                                  <a href="/docs/Meta/support" className="hover:underline">Commercial Support</a>
+                              </li>
+                          </ul>
+                      </div>
+                      <div>
+                          <h2 className="mb-6 text-sm font-semibold  uppercase dark:text-white">Legal</h2>
+                          <ul className=" dark:text-gray-400">
+                              <li className="mb-4">
+                                  <a href="/docs/Meta/privacy" className="hover:underline">Privacy Policy</a>
+                              </li>
+                              <li>
+                                  <a href="/docs/Meta/conditions" className="hover:underline">Terms &amp; Conditions</a>
+                              </li>
+                          </ul>
+                      </div>
+                  </div>
+              </div>
+              <hr className="my-6 border-gray-100 sm:mx-auto dark:border-gray-700 lg:my-8" />
+              <div className="sm:flex sm:items-center sm:justify-between">
+                  <span className="text-sm text-gray-200 sm:text-center dark:text-gray-400">© 2022 <a href="https://flowbite.com" className="hover:underline">Flowbite™</a>. All Rights Reserved.
+                  </span>
+                  <div className="flex mt-4 space-x-6 sm:justify-center sm:mt-0">
+                      <a href="https://github.com/IronERP/IronERP" className="text-gray-200 hover:text-white dark:hover:text-white">
+                        <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd" /></svg>
+                      </a>
+                      <a href="https://join.slack.com/t/ironerpcommunity/shared_invite/zt-2t4uolzc7-CUjdKR4uU1fVUMguZStAow" className="text-gray-200 hover:text-white dark:hover:text-white">
+                        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 50 50" className="size-5" fill="currentColor"><path d="M 27.894531 3.007813 C 27.425781 2.976563 26.945313 3.035156 26.480469 3.195313 C 24.503906 3.824219 23.566406 5.925781 24.191406 7.820313 L 25.835938 13.144531 L 18.59375 15.621094 L 17 10.507813 C 16.378906 8.511719 14.296875 7.5625 12.425781 8.195313 C 10.453125 8.824219 9.519531 10.925781 10.140625 12.820313 L 11.746094 17.960938 L 6.382813 19.792969 C 4.578125 20.429688 3.574219 22.546875 4.175781 24.453125 C 4.679688 26.046875 6.082031 27 7.488281 27 C 7.890625 27 8.289063 26.894531 8.59375 26.785156 L 13.921875 24.964844 L 16.066406 31.84375 L 10.390625 33.789063 C 8.484375 34.425781 7.582031 36.546875 8.183594 38.453125 C 8.6875 40.046875 9.988281 41 11.492188 41 C 11.792969 41 12.195313 40.894531 12.59375 40.785156 L 18.253906 38.875 L 20 44.476563 C 20.519531 45.949219 21.976563 47 23.429688 47 C 23.84375 47 24.261719 46.894531 24.574219 46.789063 C 26.441406 46.15625 27.480469 44.054688 26.859375 42.160156 L 25.113281 36.558594 L 32.3125 34.125 L 33.960938 39.476563 C 34.480469 40.949219 35.933594 42 37.390625 42 C 37.804688 42 38.21875 41.894531 38.53125 41.789063 C 40.402344 41.15625 41.441406 39.054688 40.816406 37.160156 L 39.167969 31.8125 L 43.671875 30.289063 C 45.476563 29.546875 46.476563 27.425781 45.777344 25.515625 C 45.171875 23.609375 43.167969 22.550781 41.363281 23.1875 L 36.96875 24.6875 L 34.847656 17.8125 L 39.605469 16.1875 C 41.511719 15.554688 42.417969 13.433594 41.8125 11.527344 C 41.210938 9.511719 39.207031 8.558594 37.398438 9.195313 L 32.6875 10.808594 L 31.050781 5.507813 C 30.582031 4.007813 29.296875 3.101563 27.894531 3.007813 Z M 28 20.15625 L 30.121094 27.035156 L 22.917969 29.5 L 20.773438 22.625 Z"></path></svg>
+                      </a>
+                  </div>
+              </div>
+          </div>
+        </footer>
+        {/* End Footer */}
       </div>
     </>
   );

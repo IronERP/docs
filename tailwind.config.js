@@ -1,8 +1,10 @@
 /** @type {import('tailwindcss').Config} */
 
+import { scopedPreflightStyles, isolateInsideOfContainer } from 'tailwindcss-scoped-preflight';
+
 module.exports = {
     content: ['./src/**/*.{html,js,jsx,ts,tsx,mdx}', './docs/**/*.mdx'],
-    corePlugins: {},
+    corePlugins: { preflight: false },
     important: "#tailwind",
     theme: {
         extend: {
@@ -12,4 +14,11 @@ module.exports = {
         }
     },
     darkMode: ['class', '[data-theme="dark"]'],
+    plugins: [
+        scopedPreflightStyles({
+            isolationStrategy: isolateInsideOfContainer('.preflight', {
+                except: '.no-preflight',
+            }),
+        }),
+    ]
   };

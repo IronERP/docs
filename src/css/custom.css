@@ -107,17 +107,13 @@
 }
 
 /*
-! tailwindcss v3.4.14 | MIT License | https://tailwindcss.com
-*/
-
-/*
 1. Prevent padding and border from affecting element width. (https://github.com/mozdevs/cssremedy/issues/4)
 2. Allow adding a border to an element by just adding a border-width. (https://github.com/tailwindcss/tailwindcss/pull/116)
 */
 
-*,
-::before,
-::after {
+*:where(.preflight,.preflight *):where(:not(.no-preflight,.no-preflight *)),
+::before:where(.preflight,.preflight *):where(:not(.no-preflight,.no-preflight *)),
+::after:where(.preflight,.preflight *):where(:not(.no-preflight,.no-preflight *)) {
   box-sizing: border-box;
   /* 1 */
   border-width: 0;
@@ -128,8 +124,8 @@
   /* 2 */
 }
 
-::before,
-::after {
+::before:where(.preflight,.preflight *):where(:not(.no-preflight,.no-preflight *)),
+::after:where(.preflight,.preflight *):where(:not(.no-preflight,.no-preflight *)) {
   --tw-content: '';
 }
 
@@ -143,8 +139,7 @@
 7. Disable tap highlights on iOS
 */
 
-html,
-:host {
+.preflight:where(:not(.no-preflight,.no-preflight *)) {
   line-height: 1.5;
   /* 1 */
   -webkit-text-size-adjust: 100%;
@@ -167,7 +162,7 @@ html,
 2. Inherit line-height from `html` so users can set them as a class directly on the `html` element.
 */
 
-body {
+.preflight:where(:not(.no-preflight,.no-preflight *)) {
   margin: 0;
   /* 1 */
   line-height: inherit;
@@ -180,7 +175,7 @@ body {
 3. Ensure horizontal rules are visible by default.
 */
 
-hr {
+hr:where(.preflight,.preflight *):where(:not(.no-preflight,.no-preflight *)) {
   height: 0;
   /* 1 */
   color: inherit;
@@ -193,7 +188,7 @@ hr {
 Add the correct text decoration in Chrome, Edge, and Safari.
 */
 
-abbr:where([title]) {
+abbr:where([title]):where(.preflight,.preflight *):where(:not(.no-preflight,.no-preflight *)) {
   -webkit-text-decoration: underline dotted;
           text-decoration: underline dotted;
 }
@@ -202,12 +197,12 @@ abbr:where([title]) {
 Remove the default font size and weight for headings.
 */
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h1:where(.preflight,.preflight *):where(:not(.no-preflight,.no-preflight *)),
+h2:where(.preflight,.preflight *):where(:not(.no-preflight,.no-preflight *)),
+h3:where(.preflight,.preflight *):where(:not(.no-preflight,.no-preflight *)),
+h4:where(.preflight,.preflight *):where(:not(.no-preflight,.no-preflight *)),
+h5:where(.preflight,.preflight *):where(:not(.no-preflight,.no-preflight *)),
+h6:where(.preflight,.preflight *):where(:not(.no-preflight,.no-preflight *)) {
   font-size: inherit;
   font-weight: inherit;
 }
@@ -216,7 +211,7 @@ h6 {
 Reset links to optimize for opt-in styling instead of opt-out.
 */
 
-a {
+a:where(.preflight,.preflight *):where(:not(.no-preflight,.no-preflight *)) {
   color: inherit;
   text-decoration: inherit;
 }
@@ -225,8 +220,8 @@ a {
 Add the correct font weight in Edge and Safari.
 */
 
-b,
-strong {
+b:where(.preflight,.preflight *):where(:not(.no-preflight,.no-preflight *)),
+strong:where(.preflight,.preflight *):where(:not(.no-preflight,.no-preflight *)) {
   font-weight: bolder;
 }
 
@@ -237,10 +232,10 @@ strong {
 4. Correct the odd `em` font sizing in all browsers.
 */
 
-code,
-kbd,
-samp,
-pre {
+code:where(.preflight,.preflight *):where(:not(.no-preflight,.no-preflight *)),
+kbd:where(.preflight,.preflight *):where(:not(.no-preflight,.no-preflight *)),
+samp:where(.preflight,.preflight *):where(:not(.no-preflight,.no-preflight *)),
+pre:where(.preflight,.preflight *):where(:not(.no-preflight,.no-preflight *)) {
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   /* 1 */
   font-feature-settings: normal;
@@ -255,7 +250,7 @@ pre {
 Add the correct font size in all browsers.
 */
 
-small {
+small:where(.preflight,.preflight *):where(:not(.no-preflight,.no-preflight *)) {
   font-size: 80%;
 }
 
@@ -263,19 +258,19 @@ small {
 Prevent `sub` and `sup` elements from affecting the line height in all browsers.
 */
 
-sub,
-sup {
+sub:where(.preflight,.preflight *):where(:not(.no-preflight,.no-preflight *)),
+sup:where(.preflight,.preflight *):where(:not(.no-preflight,.no-preflight *)) {
   font-size: 75%;
   line-height: 0;
   position: relative;
   vertical-align: baseline;
 }
 
-sub {
+sub:where(.preflight,.preflight *):where(:not(.no-preflight,.no-preflight *)) {
   bottom: -0.25em;
 }
 
-sup {
+sup:where(.preflight,.preflight *):where(:not(.no-preflight,.no-preflight *)) {
   top: -0.5em;
 }
 
@@ -285,7 +280,7 @@ sup {
 3. Remove gaps between table borders by default.
 */
 
-table {
+table:where(.preflight,.preflight *):where(:not(.no-preflight,.no-preflight *)) {
   text-indent: 0;
   /* 1 */
   border-color: inherit;
@@ -300,11 +295,11 @@ table {
 3. Remove default padding in all browsers.
 */
 
-button,
-input,
-optgroup,
-select,
-textarea {
+button:where(.preflight,.preflight *):where(:not(.no-preflight,.no-preflight *)),
+input:where(.preflight,.preflight *):where(:not(.no-preflight,.no-preflight *)),
+optgroup:where(.preflight,.preflight *):where(:not(.no-preflight,.no-preflight *)),
+select:where(.preflight,.preflight *):where(:not(.no-preflight,.no-preflight *)),
+textarea:where(.preflight,.preflight *):where(:not(.no-preflight,.no-preflight *)) {
   font-family: inherit;
   /* 1 */
   font-feature-settings: inherit;
@@ -331,8 +326,8 @@ textarea {
 Remove the inheritance of text transform in Edge and Firefox.
 */
 
-button,
-select {
+button:where(.preflight,.preflight *):where(:not(.no-preflight,.no-preflight *)),
+select:where(.preflight,.preflight *):where(:not(.no-preflight,.no-preflight *)) {
   text-transform: none;
 }
 
@@ -341,10 +336,10 @@ select {
 2. Remove default button styles.
 */
 
-button,
-input:where([type='button']),
-input:where([type='reset']),
-input:where([type='submit']) {
+button:where(.preflight,.preflight *):where(:not(.no-preflight,.no-preflight *)),
+input:where([type='button']):where(.preflight,.preflight *):where(:not(.no-preflight,.no-preflight *)),
+input:where([type='reset']):where(.preflight,.preflight *):where(:not(.no-preflight,.no-preflight *)),
+input:where([type='submit']):where(.preflight,.preflight *):where(:not(.no-preflight,.no-preflight *)) {
   -webkit-appearance: button;
   /* 1 */
   background-color: transparent;
@@ -357,7 +352,7 @@ input:where([type='submit']) {
 Use the modern Firefox focus style for all focusable elements.
 */
 
-:-moz-focusring {
+:-moz-focusring:where(.preflight,.preflight *):where(:not(.no-preflight,.no-preflight *)) {
   outline: auto;
 }
 
@@ -365,7 +360,7 @@ Use the modern Firefox focus style for all focusable elements.
 Remove the additional `:invalid` styles in Firefox. (https://github.com/mozilla/gecko-dev/blob/2f9eacd9d3d995c937b4251a5557d95d494c9be1/layout/style/res/forms.css#L728-L737)
 */
 
-:-moz-ui-invalid {
+:-moz-ui-invalid:where(.preflight,.preflight *):where(:not(.no-preflight,.no-preflight *)) {
   box-shadow: none;
 }
 
@@ -373,7 +368,7 @@ Remove the additional `:invalid` styles in Firefox. (https://github.com/mozilla/
 Add the correct vertical alignment in Chrome and Firefox.
 */
 
-progress {
+progress:where(.preflight,.preflight *):where(:not(.no-preflight,.no-preflight *)) {
   vertical-align: baseline;
 }
 
@@ -381,8 +376,8 @@ progress {
 Correct the cursor style of increment and decrement buttons in Safari.
 */
 
-::-webkit-inner-spin-button,
-::-webkit-outer-spin-button {
+::-webkit-inner-spin-button:where(.preflight,.preflight *):where(:not(.no-preflight,.no-preflight *)),
+::-webkit-outer-spin-button:where(.preflight,.preflight *):where(:not(.no-preflight,.no-preflight *)) {
   height: auto;
 }
 
@@ -391,7 +386,7 @@ Correct the cursor style of increment and decrement buttons in Safari.
 2. Correct the outline style in Safari.
 */
 
-[type='search'] {
+[type='search']:where(.preflight,.preflight *):where(:not(.no-preflight,.no-preflight *)) {
   -webkit-appearance: textfield;
   /* 1 */
   outline-offset: -2px;
@@ -402,7 +397,7 @@ Correct the cursor style of increment and decrement buttons in Safari.
 Remove the inner padding in Chrome and Safari on macOS.
 */
 
-::-webkit-search-decoration {
+::-webkit-search-decoration:where(.preflight,.preflight *):where(:not(.no-preflight,.no-preflight *)) {
   -webkit-appearance: none;
 }
 
@@ -411,7 +406,7 @@ Remove the inner padding in Chrome and Safari on macOS.
 2. Change font properties to `inherit` in Safari.
 */
 
-::-webkit-file-upload-button {
+::-webkit-file-upload-button:where(.preflight,.preflight *):where(:not(.no-preflight,.no-preflight *)) {
   -webkit-appearance: button;
   /* 1 */
   font: inherit;
@@ -422,7 +417,7 @@ Remove the inner padding in Chrome and Safari on macOS.
 Add the correct display in Chrome and Safari.
 */
 
-summary {
+summary:where(.preflight,.preflight *):where(:not(.no-preflight,.no-preflight *)) {
   display: list-item;
 }
 
@@ -430,34 +425,34 @@ summary {
 Removes the default spacing and border for appropriate elements.
 */
 
-blockquote,
-dl,
-dd,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-hr,
-figure,
-p,
-pre {
+blockquote:where(.preflight,.preflight *):where(:not(.no-preflight,.no-preflight *)),
+dl:where(.preflight,.preflight *):where(:not(.no-preflight,.no-preflight *)),
+dd:where(.preflight,.preflight *):where(:not(.no-preflight,.no-preflight *)),
+h1:where(.preflight,.preflight *):where(:not(.no-preflight,.no-preflight *)),
+h2:where(.preflight,.preflight *):where(:not(.no-preflight,.no-preflight *)),
+h3:where(.preflight,.preflight *):where(:not(.no-preflight,.no-preflight *)),
+h4:where(.preflight,.preflight *):where(:not(.no-preflight,.no-preflight *)),
+h5:where(.preflight,.preflight *):where(:not(.no-preflight,.no-preflight *)),
+h6:where(.preflight,.preflight *):where(:not(.no-preflight,.no-preflight *)),
+hr:where(.preflight,.preflight *):where(:not(.no-preflight,.no-preflight *)),
+figure:where(.preflight,.preflight *):where(:not(.no-preflight,.no-preflight *)),
+p:where(.preflight,.preflight *):where(:not(.no-preflight,.no-preflight *)),
+pre:where(.preflight,.preflight *):where(:not(.no-preflight,.no-preflight *)) {
   margin: 0;
 }
 
-fieldset {
+fieldset:where(.preflight,.preflight *):where(:not(.no-preflight,.no-preflight *)) {
   margin: 0;
   padding: 0;
 }
 
-legend {
+legend:where(.preflight,.preflight *):where(:not(.no-preflight,.no-preflight *)) {
   padding: 0;
 }
 
-ol,
-ul,
-menu {
+ol:where(.preflight,.preflight *):where(:not(.no-preflight,.no-preflight *)),
+ul:where(.preflight,.preflight *):where(:not(.no-preflight,.no-preflight *)),
+menu:where(.preflight,.preflight *):where(:not(.no-preflight,.no-preflight *)) {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -467,7 +462,7 @@ menu {
 Reset default styling for dialogs.
 */
 
-dialog {
+dialog:where(.preflight,.preflight *):where(:not(.no-preflight,.no-preflight *)) {
   padding: 0;
 }
 
@@ -475,7 +470,7 @@ dialog {
 Prevent resizing textareas horizontally by default.
 */
 
-textarea {
+textarea:where(.preflight,.preflight *):where(:not(.no-preflight,.no-preflight *)) {
   resize: vertical;
 }
 
@@ -484,8 +479,8 @@ textarea {
 2. Set the default placeholder color to the user's configured gray 400 color.
 */
 
-input::placeholder,
-textarea::placeholder {
+input::placeholder:where(.preflight,.preflight *):where(:not(.no-preflight,.no-preflight *)),
+textarea::placeholder:where(.preflight,.preflight *):where(:not(.no-preflight,.no-preflight *)) {
   opacity: 1;
   /* 1 */
   color: #9ca3af;
@@ -496,8 +491,8 @@ textarea::placeholder {
 Set the default cursor for buttons.
 */
 
-button,
-[role="button"] {
+button:where(.preflight,.preflight *):where(:not(.no-preflight,.no-preflight *)),
+[role="button"]:where(.preflight,.preflight *):where(:not(.no-preflight,.no-preflight *)) {
   cursor: pointer;
 }
 
@@ -505,7 +500,7 @@ button,
 Make sure disabled buttons don't get the pointer cursor.
 */
 
-:disabled {
+:disabled:where(.preflight,.preflight *):where(:not(.no-preflight,.no-preflight *)) {
   cursor: default;
 }
 
@@ -515,14 +510,14 @@ Make sure disabled buttons don't get the pointer cursor.
    This can trigger a poorly considered lint error in some tools but is included by design.
 */
 
-img,
-svg,
-video,
-canvas,
-audio,
-iframe,
-embed,
-object {
+img:where(.preflight,.preflight *):where(:not(.no-preflight,.no-preflight *)),
+svg:where(.preflight,.preflight *):where(:not(.no-preflight,.no-preflight *)),
+video:where(.preflight,.preflight *):where(:not(.no-preflight,.no-preflight *)),
+canvas:where(.preflight,.preflight *):where(:not(.no-preflight,.no-preflight *)),
+audio:where(.preflight,.preflight *):where(:not(.no-preflight,.no-preflight *)),
+iframe:where(.preflight,.preflight *):where(:not(.no-preflight,.no-preflight *)),
+embed:where(.preflight,.preflight *):where(:not(.no-preflight,.no-preflight *)),
+object:where(.preflight,.preflight *):where(:not(.no-preflight,.no-preflight *)) {
   display: block;
   /* 1 */
   vertical-align: middle;
@@ -533,15 +528,15 @@ object {
 Constrain images and videos to the parent width and preserve their intrinsic aspect ratio. (https://github.com/mozdevs/cssremedy/issues/14)
 */
 
-img,
-video {
+img:where(.preflight,.preflight *):where(:not(.no-preflight,.no-preflight *)),
+video:where(.preflight,.preflight *):where(:not(.no-preflight,.no-preflight *)) {
   max-width: 100%;
   height: auto;
 }
 
 /* Make elements with the HTML hidden attribute stay hidden by default */
 
-[hidden]:where(:not([hidden="until-found"])) {
+[hidden]:where(:not([hidden="until-found"])):where(.preflight,.preflight *):where(:not(.no-preflight,.no-preflight *)) {
   display: none;
 }
 
@@ -633,12 +628,13 @@ video {
   margin-bottom: 0.5rem;
 }
 
-#tailwind .-ml-1 {
-  margin-left: -0.25rem;
+#tailwind .my-6 {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
 }
 
-#tailwind .-mr-1 {
-  margin-right: -0.25rem;
+#tailwind .mb-10 {
+  margin-bottom: 2.5rem;
 }
 
 #tailwind .mb-4 {
@@ -647,6 +643,10 @@ video {
 
 #tailwind .mb-5 {
   margin-bottom: 1.25rem;
+}
+
+#tailwind .mb-6 {
+  margin-bottom: 1.5rem;
 }
 
 #tailwind .mb-7 {
@@ -681,20 +681,16 @@ video {
   margin-right: 1.25rem;
 }
 
+#tailwind .ms-2 {
+  margin-inline-start: 0.5rem;
+}
+
 #tailwind .mt-4 {
   margin-top: 1rem;
 }
 
 #tailwind .mt-8 {
   margin-top: 2rem;
-}
-
-#tailwind .ms-2 {
-  margin-inline-start: 0.5rem;
-}
-
-#tailwind .mb-10 {
-  margin-bottom: 2.5rem;
 }
 
 #tailwind .block {
@@ -774,6 +770,10 @@ video {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
+#tailwind .grid-cols-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
 #tailwind .flex-col {
   flex-direction: column;
 }
@@ -794,8 +794,18 @@ video {
   justify-content: space-between;
 }
 
+#tailwind .gap-8 {
+  gap: 2rem;
+}
+
 #tailwind .gap-x-2 {
   column-gap: 0.5rem;
+}
+
+#tailwind :is(.space-x-6 > :not([hidden]) ~ :not([hidden])) {
+  --tw-space-x-reverse: 0;
+  margin-right: calc(1.5rem * var(--tw-space-x-reverse));
+  margin-left: calc(1.5rem * calc(1 - var(--tw-space-x-reverse)));
 }
 
 #tailwind :is(.space-y-4 > :not([hidden]) ~ :not([hidden])) {
@@ -816,16 +826,16 @@ video {
   border-radius: 0.25rem;
 }
 
+#tailwind .rounded-\[calc\(0\.5rem-1px\)\] {
+  border-radius: calc(0.5rem - 1px);
+}
+
 #tailwind .rounded-full {
   border-radius: 9999px;
 }
 
 #tailwind .rounded-lg {
   border-radius: 0.5rem;
-}
-
-#tailwind .rounded-\[calc\(0\.5rem-1px\)\] {
-  border-radius: calc(0.5rem - 1px);
 }
 
 #tailwind .border {
@@ -860,6 +870,16 @@ video {
   background-color: rgb(243 244 246 / var(--tw-bg-opacity));
 }
 
+#tailwind .bg-gray-800 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(31 41 55 / var(--tw-bg-opacity));
+}
+
+#tailwind .bg-gray-950 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(3 7 18 / var(--tw-bg-opacity));
+}
+
 #tailwind .bg-primary-600 {
   --tw-bg-opacity: 1;
   background-color: rgb(37 99 235 / var(--tw-bg-opacity));
@@ -878,11 +898,6 @@ video {
 #tailwind .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
-}
-
-#tailwind .bg-gray-950 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(3 7 18 / var(--tw-bg-opacity));
 }
 
 #tailwind .bg-\[linear-gradient\(to_right\2c \#f0f0f0_1px\2c transparent_1px\)\2c linear-gradient\(to_bottom\2c \#f0f0f0_1px\2c transparent_1px\)\] {
@@ -915,6 +930,10 @@ video {
   padding: 0.5rem;
 }
 
+#tailwind .p-4 {
+  padding: 1rem;
+}
+
 #tailwind .p-px {
   padding: 1px;
 }
@@ -929,9 +948,14 @@ video {
   padding-right: 1rem;
 }
 
-#tailwind .px-5 {
-  padding-left: 1.25rem;
-  padding-right: 1.25rem;
+#tailwind .px-6 {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+#tailwind .px-\[calc\(1\.5rem-1px\)\] {
+  padding-left: calc(1.5rem - 1px);
+  padding-right: calc(1.5rem - 1px);
 }
 
 #tailwind .py-1 {
@@ -954,24 +978,9 @@ video {
   padding-bottom: 0.625rem;
 }
 
-#tailwind .py-3 {
-  padding-top: 0.75rem;
-  padding-bottom: 0.75rem;
-}
-
 #tailwind .py-8 {
   padding-top: 2rem;
   padding-bottom: 2rem;
-}
-
-#tailwind .px-\[calc\(1\.5rem-1px\)\] {
-  padding-left: calc(1.5rem - 1px);
-  padding-right: calc(1.5rem - 1px);
-}
-
-#tailwind .px-6 {
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
 }
 
 #tailwind .pl-3 {
@@ -994,6 +1003,11 @@ video {
   text-align: center;
 }
 
+#tailwind .text-2xl {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
 #tailwind .text-3xl {
   font-size: 1.875rem;
   line-height: 2.25rem;
@@ -1002,11 +1016,6 @@ video {
 #tailwind .text-4xl {
   font-size: 2.25rem;
   line-height: 2.5rem;
-}
-
-#tailwind .text-base {
-  font-size: 1rem;
-  line-height: 1.5rem;
 }
 
 #tailwind .text-lg {
@@ -1069,6 +1078,11 @@ video {
   letter-spacing: 0.025em;
 }
 
+#tailwind .text-gray-200 {
+  --tw-text-opacity: 1;
+  color: rgb(229 231 235 / var(--tw-text-opacity));
+}
+
 #tailwind .text-gray-400 {
   --tw-text-opacity: 1;
   color: rgb(156 163 175 / var(--tw-text-opacity));
@@ -1099,15 +1113,6 @@ video {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
-#tailwind .text-primary-600 {
-  --tw-text-opacity: 1;
-  color: rgb(37 99 235 / var(--tw-text-opacity));
-}
-
-#tailwind .underline {
-  text-decoration-line: underline;
-}
-
 #tailwind .shadow {
   --tw-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
   --tw-shadow-colored: 0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color);
@@ -1128,12 +1133,12 @@ video {
   transition-duration: 150ms;
 }
 
-#tailwind .duration-300 {
-  transition-duration: 300ms;
-}
-
 #tailwind .duration-200 {
   transition-duration: 200ms;
+}
+
+#tailwind .duration-300 {
+  transition-duration: 300ms;
 }
 
 /**
@@ -1144,6 +1149,23 @@ video {
 
 #tailwind a:hover {
   text-decoration: none;
+}
+
+a.slack-channel {
+  display: inline-block;
+  background-color: #eee;
+  border-radius: 10px;
+  padding-left: 5px;
+  padding-right: 5px;
+  /* padding-top: 1px; */
+  padding-bottom: 1px;
+}
+
+a.slack-channel::before {
+  display: inline-block;
+  content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' x='0px' y='0px' width='14px' height='14px' viewBox='0 0 50 50' className='size-5' fill='%233779e5'%3E%3Cpath d='M 27.894531 3.007813 C 27.425781 2.976563 26.945313 3.035156 26.480469 3.195313 C 24.503906 3.824219 23.566406 5.925781 24.191406 7.820313 L 25.835938 13.144531 L 18.59375 15.621094 L 17 10.507813 C 16.378906 8.511719 14.296875 7.5625 12.425781 8.195313 C 10.453125 8.824219 9.519531 10.925781 10.140625 12.820313 L 11.746094 17.960938 L 6.382813 19.792969 C 4.578125 20.429688 3.574219 22.546875 4.175781 24.453125 C 4.679688 26.046875 6.082031 27 7.488281 27 C 7.890625 27 8.289063 26.894531 8.59375 26.785156 L 13.921875 24.964844 L 16.066406 31.84375 L 10.390625 33.789063 C 8.484375 34.425781 7.582031 36.546875 8.183594 38.453125 C 8.6875 40.046875 9.988281 41 11.492188 41 C 11.792969 41 12.195313 40.894531 12.59375 40.785156 L 18.253906 38.875 L 20 44.476563 C 20.519531 45.949219 21.976563 47 23.429688 47 C 23.84375 47 24.261719 46.894531 24.574219 46.789063 C 26.441406 46.15625 27.480469 44.054688 26.859375 42.160156 L 25.113281 36.558594 L 32.3125 34.125 L 33.960938 39.476563 C 34.480469 40.949219 35.933594 42 37.390625 42 C 37.804688 42 38.21875 41.894531 38.53125 41.789063 C 40.402344 41.15625 41.441406 39.054688 40.816406 37.160156 L 39.167969 31.8125 L 43.671875 30.289063 C 45.476563 29.546875 46.476563 27.425781 45.777344 25.515625 C 45.171875 23.609375 43.167969 22.550781 41.363281 23.1875 L 36.96875 24.6875 L 34.847656 17.8125 L 39.605469 16.1875 C 41.511719 15.554688 42.417969 13.433594 41.8125 11.527344 C 41.210938 9.511719 39.207031 8.558594 37.398438 9.195313 L 32.6875 10.808594 L 31.050781 5.507813 C 30.582031 4.007813 29.296875 3.101563 27.894531 3.007813 Z M 28 20.15625 L 30.121094 27.035156 L 22.917969 29.5 L 20.773438 22.625 Z'%3E%3C/path%3E%3C/svg%3E");
+  margin-top: 1px;
+  margin-right: 4px;
 }
 
 #tailwind .before\:absolute::before {
@@ -1230,11 +1252,6 @@ video {
   background-color: rgb(249 250 251 / var(--tw-bg-opacity));
 }
 
-#tailwind .hover\:bg-primary-800:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(30 64 175 / var(--tw-bg-opacity));
-}
-
 #tailwind .hover\:bg-slate-800:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(30 41 59 / var(--tw-bg-opacity));
@@ -1245,8 +1262,13 @@ video {
   color: rgb(31 41 55 / var(--tw-text-opacity));
 }
 
-#tailwind .hover\:no-underline:hover {
-  text-decoration-line: none;
+#tailwind .hover\:text-white:hover {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+#tailwind .hover\:underline:hover {
+  text-decoration-line: underline;
 }
 
 #tailwind .hover\:before\:scale-100:hover::before {
@@ -1266,6 +1288,12 @@ video {
   outline-offset: 2px;
 }
 
+#tailwind .focus\:ring:focus {
+  --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
+  --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(3px + var(--tw-ring-offset-width)) var(--tw-ring-color);
+  box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
+}
+
 #tailwind .focus\:ring-2:focus {
   --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
   --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);
@@ -1278,15 +1306,9 @@ video {
   box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
 }
 
-#tailwind .focus\:ring:focus {
-  --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
-  --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(3px + var(--tw-ring-offset-width)) var(--tw-ring-color);
-  box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
-}
-
-#tailwind .focus\:ring-gray-100:focus {
+#tailwind .focus\:ring-blue-300:focus {
   --tw-ring-opacity: 1;
-  --tw-ring-color: rgb(243 244 246 / var(--tw-ring-opacity));
+  --tw-ring-color: rgb(147 197 253 / var(--tw-ring-opacity));
 }
 
 #tailwind .focus\:ring-gray-200:focus {
@@ -1300,11 +1322,6 @@ video {
 }
 
 #tailwind .focus\:ring-primary-300:focus {
-  --tw-ring-opacity: 1;
-  --tw-ring-color: rgb(147 197 253 / var(--tw-ring-opacity));
-}
-
-#tailwind .focus\:ring-blue-300:focus {
   --tw-ring-opacity: 1;
   --tw-ring-color: rgb(147 197 253 / var(--tw-ring-opacity));
 }
@@ -1377,11 +1394,6 @@ video {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
-#tailwind .dark\:text-primary-500:is([data-theme="dark"] *) {
-  --tw-text-opacity: 1;
-  color: rgb(59 130 246 / var(--tw-text-opacity));
-}
-
 #tailwind .dark\:before\:from-purple-600:is([data-theme="dark"] *)::before {
   content: var(--tw-content);
   --tw-gradient-from: #9333ea var(--tw-gradient-from-position);
@@ -1434,18 +1446,22 @@ video {
   --tw-ring-color: rgb(30 64 175 / var(--tw-ring-opacity));
 }
 
-#tailwind .dark\:focus\:ring-primary-900:focus:is([data-theme="dark"] *) {
-  --tw-ring-opacity: 1;
-  --tw-ring-color: rgb(30 58 138 / var(--tw-ring-opacity));
-}
-
 #tailwind .dark\:focus\:ring-white\/10:focus:is([data-theme="dark"] *) {
   --tw-ring-color: rgb(255 255 255 / 0.1);
 }
 
 @media (min-width: 640px) {
+  #tailwind .sm\:mx-auto {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   #tailwind .sm\:mt-0 {
     margin-top: 0px;
+  }
+
+  #tailwind .sm\:flex {
+    display: flex;
   }
 
   #tailwind .sm\:h-9 {
@@ -1456,8 +1472,16 @@ video {
     width: auto;
   }
 
+  #tailwind .sm\:grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
   #tailwind .sm\:flex-row {
     flex-direction: row;
+  }
+
+  #tailwind .sm\:items-center {
+    align-items: center;
   }
 
   #tailwind .sm\:justify-center {
@@ -1466,6 +1490,10 @@ video {
 
   #tailwind .sm\:justify-between {
     justify-content: space-between;
+  }
+
+  #tailwind .sm\:gap-6 {
+    gap: 1.5rem;
   }
 
   #tailwind :is(.sm\:space-x-4 > :not([hidden]) ~ :not([hidden])) {
@@ -1480,6 +1508,10 @@ video {
     margin-bottom: calc(0px * var(--tw-space-y-reverse));
   }
 
+  #tailwind .sm\:p-6 {
+    padding: 1.5rem;
+  }
+
   #tailwind .sm\:px-16 {
     padding-left: 4rem;
     padding-right: 4rem;
@@ -1489,15 +1521,31 @@ video {
     padding-top: 4rem;
     padding-bottom: 4rem;
   }
+
+  #tailwind .sm\:text-center {
+    text-align: center;
+  }
 }
 
 @media (min-width: 768px) {
+  #tailwind .md\:mb-0 {
+    margin-bottom: 0px;
+  }
+
+  #tailwind .md\:flex {
+    display: flex;
+  }
+
   #tailwind .md\:max-w-screen-md {
     max-width: 768px;
   }
 
   #tailwind .md\:grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  #tailwind .md\:justify-between {
+    justify-content: space-between;
   }
 
   #tailwind .md\:gap-16 {
@@ -1526,6 +1574,11 @@ video {
 
   #tailwind .lg\:order-2 {
     order: 2;
+  }
+
+  #tailwind .lg\:my-8 {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
   }
 
   #tailwind .lg\:mb-0 {

@@ -1,6 +1,8 @@
-# Contributing to IronERP
+---
+sidebar_position: 2
+---
 
-## Contributing Code
+# Contributing to IronERP Docs
 
 :::info
 
@@ -9,54 +11,134 @@ For information about contributing to IronERP Code, please see
 
 :::
 
-## Contributing Documentation
+# Code of Conduct
 
 We have adopted the [Rust Code of Conduct](https://www.rust-lang.org/policies/code-of-conduct)
 for the IronERP project. Please follow this code of conduct when interacting with the
 IronERP community in any way.
 
-### MkDocs
+## Docusaurus
 
-The IronERP documentation website is generated using the MkDocs tool. Here is a super-quick
-getting started guide. For more technical information, please see the [MkDocs](https://www.mkdocs.org)
-and [MkDocs Material](https://squidfunk.github.io/mkdocs-material/) documentation sites.
+:::warning
 
-#### Super-Quick-Start
+We've recently migrated to Docusaurus from MkDocs. Everything should be migrated
+over at this point but if you find something that's missing from the new version,
+please look for the missing content in the `old` branch and add it.
 
-**Requirements:**
+:::
 
- - Python 3+
+The IronERP documentation website is built with [Docusaurus](https://docusaurus.io/).
+This is a super-quick getting started guide that will walk you through the process
+of cloning the docs repo, making changes, verifying them locally and submitting
+them for a review.
+
+For more technical details, please see the [Docusaurus Docs](https://docusaurus.io/docs).
+
+## Super-Quick-Start
+
+### Requirements
+
+ - NodeJS 18
+ - Yarn 3
  - Text Editor
  - Web Browser
 
-**Setup:**
+:::warning
+
+Please make sure you're using NodeJS 18 and Yarn 3. Any other version combinations
+will generate an incompatible `yarn.lock` that will then break deployments of
+the site.
+
+:::
+
+### Setup
+
+First, please fork the IronERP docs repository and clone your fork. You will
+then use your fork to submit a pull request. Only trusted contributors can
+submit code directly.
+
+`// TODO: Add a fork link`
 
 ```shell
-# Clone the IronERP repository
-$> git clone https://github.com/UTF-8x/IronERP.git
+# Clone your fork
+$> git clone https://github.com/<username>/ironerp_docs.git
 
-# Change into the IronERP docs directory and create a virtual env
-$> cd IronERP/docs && python -m venv venv
+# Make sure you're using the right tool versions
+$> node --version
+    >>> v18.17.1
 
-# Activate the virtual env on Linux/macOS
-$> source ./venv/bin/activate
+$> yarn --version
+    >>> 3.6.3
 
-# Activate the virtualenv on Windows (PowerShell)
-$> & ".\venv\Scripts\Activate.ps1"
+# Change into the IronERP docs directory and create a new branch.
+# Please try to make the branch name descriptive of your changes
+$> cd ironerp_docs && git checkout -b feature/add-some-docs
 
-# Install Python Dependencies
-$> pip3 install -r requirements.txt
+# Install dependencies
+$> yarn
 
-# Run the preview serevr
-$> mkdocs serve
+# Start the development server
+$> yarn start
 ```
 
 You can now edit the markdown files in `docs/` and preview your changes at
-[http://localhost:8000](http://localhost:8000).
+[http://localhost:3000](http://localhost:3000).
 
-### Content Guidelines
+### Structure
 
-#### Placeholders
+All documentation pages are organised as Markdown `.md` files in the `docs/`
+directory. The documentation is split into sections. These section hold 
+documents related to various "components" of the IronERP project.
+
+These sections are:
+  - **Intro:** The quick-start guide and related documents
+  - **Engine:** Documentation for the core IronERP Engine
+  - **CLI:** Documentation for the (now deprecated) CLI
+  - **Meta:** Organizational information
+
+If you're adding a completely new document, please make sure it's in a section
+where it fits the most. If unsure, ask in Slack.
+
+If you feel like your addition warrants creating a completely new section, please
+consult this idea in the 
+<a href="https://ironerpcommunity.slack.com/archives/C07UUQP8LMP" class="slack-channel">documentation</a>
+Slack channel first.
+
+### Making Changes
+
+Pick a file and make your edits. The files are formatted with 
+[Markdown](https://www.markdownguide.org/basic-syntax/).
+
+There are no set rules for file names and structure. If you need to add a new file,
+simply try to follow whatever conventions seem to be in use around the file's
+siblings.
+
+### Submitting your Changes
+
+Add and commit your changes and push them to your fork. Then create a pull request
+from the GitHub UI. Always target the `main` branch in your pull requests. If
+your PR contains multiple commits, please check the option to squash them.
+
+:::warning
+
+Don't forget to **sign off your commits**. By signing off a commit, you express
+your agreement to the terms of the 
+[Developer Certificate of Origin](https://developercertificate.org/). We cannot
+accept commits that are not signed off!
+
+To sign off a commit, use `--signoff` or `-s`.
+
+:::
+
+```shell
+$> git add --all
+$> git commit -ams "feat: added some docs"
+$> git push origin feature/add-some-docs
+```
+
+## Content Guidelines
+
+### Placeholders
 
 Sometimes, a placeholder value might be required in the documentation, such as an argument
 in a command, an IP address or hostname, etc. This list is by no means exhaustive so please
@@ -80,7 +162,7 @@ would be hosted within the user's private network alongside IronERP.
 Conversely, for **IPv6 addresses**, please use the prefix from [RFC3849](https://www.rfc-editor.org/rfc/rfc3849).
 
 The IPv6 prefix reserved for documentation purposes is `2001:DB8::/32`. You can use any address
-with this prefix in the documentation.
+within this prefix in the documentation.
 
 ---
 
@@ -109,7 +191,7 @@ documentations.
 For services that might reasonably be expected to run on the developer's machine alongside IronERP,
 you can use `127.0.0.1` or `localhost`.
 
-In the context of Docker and Docker Compose, try to use Docker-like names. For example, in an
+In the context of Docker and Docker Compose, try to use Docker-like hostnames. For example, in an
 IronERP Docker Compose file, the Meilisearch component would most likely be available under the
 hostname `meilisearch`.
 
@@ -127,15 +209,3 @@ and/or relevant programming/configuration language.
 **Required** arguments should ideally be marked with angled brackets, e.g.  `command -r <required_argument>`.
 
 **Optional** arguments should be in square brackets, e.g. `command -o [optional_argument]`.
-
-In some contexts, such as configuration files, a templating-language-like placeholder might
-be visually more appropriate. E.g.
-
-```yaml
-services:
-  name: "{{ service_name }}"
-  image: "{{ image }}:{{ tag }}"
-```
-
-*Please take care to not use this form in contexts where template parsing might be expected
-as this would unnecessarily confuse the user.* 
