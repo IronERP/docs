@@ -4,6 +4,9 @@
 # Production
 /build
 
+.pnp.cjs
+.pnp.loader.mjs
+
 # Generated files
 .docusaurus
 .cache-loader

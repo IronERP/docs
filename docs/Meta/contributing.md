@@ -7,7 +7,7 @@ sidebar_position: 2
 :::info
 
 For information about contributing to IronERP Code, please see
-[Contributing Code](/docs/Engine/contributing)
+[Contributing Code](/docs/engine/contributing)
 
 :::
 

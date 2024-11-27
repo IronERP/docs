@@ -16,7 +16,7 @@ For more details, please refer to the
 [Meilisearch Docs](https://www.meilisearch.com/docs)
 
 For more info about how IronERP interacts with Meilisearch, please see the
-[IronERP Search Docs](/docs/Engine/Components/search).
+[IronERP Search Docs](/docs/engine/components/search).
 
 :::
 

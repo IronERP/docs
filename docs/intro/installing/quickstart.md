@@ -50,14 +50,6 @@ of running IronERP is recommended for local development.
  - MongoDB
  - [Meilisearch](/docs/intro/misc/meilisearch)
 
-:::warning
-
-This guide assumes you already have MongoDB and Meilisearch running. For guides
-on how to set up external dependencies, please look in 
-[Miscellaneous Guides](/docs/intro/misc).
-
-:::
-
 ### Getting the Code
 
 Either fork the IronERP repo and clone your fork, or clone the IronERP repo
