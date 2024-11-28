@@ -1,5 +1,6 @@
 ---
 sidebar_label: Help
+id: help
 ---
 
 # The Help Module

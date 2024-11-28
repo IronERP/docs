@@ -1,5 +1,6 @@
 ---
 sidebar_label: Models
+id: models
 ---
 
 # The Models Module

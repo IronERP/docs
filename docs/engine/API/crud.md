@@ -1,3 +1,7 @@
+---
+id: crud
+---
+
 # Model CRUD API
 
 IronERP automatically generates CRUD API controllers for all loaded 
@@ -64,7 +68,7 @@ Searchable [^2]
 
 This endpoint performs search over marked fields of a specific model. To
 perform a simplified search over **all** database entities, use the
-[Meilisearch Endpoints](/docs/engine/API/meilisearch) instead!
+[Meilisearch Endpoints](/docs/engine/API/meilisearch-api) instead!
 
 :::
 

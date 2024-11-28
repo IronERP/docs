@@ -1,4 +1,5 @@
 ---
+id: kubernetes
 sidebar_position: 4
 ---
 

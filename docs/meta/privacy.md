@@ -1,4 +1,5 @@
 ---
+id: privacy
 sidebar_position: 4
 ---
 

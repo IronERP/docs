@@ -1,3 +1,6 @@
+---
+id: meilisearch
+---
 # Running Meilisearch in Docker
 
 To quickly spin up a testing instance of Meilisearch, you can run the

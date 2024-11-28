@@ -1,3 +1,7 @@
+---
+id: search
+---
+
 # Search
 
 IronERP provides various search facilities in different contexts.

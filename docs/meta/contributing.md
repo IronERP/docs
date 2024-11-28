@@ -1,4 +1,5 @@
 ---
+id: contributing
 sidebar_position: 2
 ---
 

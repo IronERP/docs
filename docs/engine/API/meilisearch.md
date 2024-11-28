@@ -1,3 +1,7 @@
+---
+id: meilisearch-api
+---
+
 # Meilisearch API
 
 IronERP indexes simplified information about all database entities in 
