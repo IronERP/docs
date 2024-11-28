@@ -1,5 +1,0 @@
----
-id: controllers
----
-
-# Controllers
